@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Shahar Gvirtz">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>הורדת מסד הנתונים לדוגמא - קורס SQL בסיסי</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u05d4\u05d5\u05e8\u05d3\u05ea \u05de\u05e1\u05d3 \u05d4\u05e0\u05ea\u05d5\u05e0\u05d9\u05dd \u05dc\u05d3\u05d5\u05d2\u05de\u05d0";
+    var mkdocs_page_input_path = "sampledb.md";
+    var mkdocs_page_url = "/sampledb/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> קורס SQL בסיסי</a>
+
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">ראשי</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../c01/">פרק 1 - מבוא</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../c02/">פרק 2 - התקנות</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../c03/">פרק 3 - שאילתות SELECT בסיסיות</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../c04/">פרק 4 - Nested Queries ו-Common Table Expressions</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../c05/">פרק 5 - JOIN</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../c06/">פרק 6 - עבודה עם GROUP BY ועם APPLY</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../c07/">פרק 7-  אופרטורים נוספים בשפת SQL</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../c08/">פרק 8 - Window Functions</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../c09/">פרק 9 - יצירת טבלאות והוספה/עדכון/מ חיקה של נתונים</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../c10/">פרק 10 - תנאים ולולאות ב- SQL, עבודה עם CURSOR-ים ושימוש ב- Dynamic SQL</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">הורדת מסד הנתונים לדוגמא</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#_1">מסד הנתונים לדוגמא</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_2">הורדה</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../resources/">לקריאה נוספת</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">קורס SQL בסיסי</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">ראשי</a> &raquo;</li>
+    
+      
+    
+    <li>הורדת מסד הנתונים לדוגמא</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="_1">מסד הנתונים לדוגמא</h1>
+<p>בתור מסד נתונים לדוגמא, שמולו נתאמן בהרצת שאילתות מסוגים שונים, נעשה שימוש במסד הנתונים של <a href="http://stackoverflow.com">StackOverflow</a> אותו הם מפרסמים בחינם.</p>
+<p>מסד הנתונים שעליו נעבוד <em>מבוסס</em> על מסד הנתונים של StackOverflow, אבל אינו העתק מדוייק שלו. בין השינויים שנעשו על מסד הנתונים המקורי ניתן למנות מחיקת מידע מיותר (כלומר, מידע שלא הכרחי לטובת הרצת השאילתות עליו נתאמן בקורס הזה) ושינויים שונים בסכימה של מסד הנתונים כדי להתאים אותו לצרכי הקורס.</p>
+<p>מסד הנתונים לדוגמא זמין בשתי גרסאות: גרסא גדולה יותר (ששוקלת בערך 15GB לאחר השחזור מגיבוי) וגרסא קטנה יותר (ששוקלת בערך 5GB לאחר השחזור מגיבוי).
+השוני בין הגרסאות הוא בתקופת החומר שנמצאת. בעוד שהגרסא הגדולה כוללת את המידע על כל הפוסטים שפורסמו ב-StackOverflow מהיווסדו, הגרסא המצומצמת כוללת רק פוסטים משנת 2016. הגרסא המצומצמת מספיקה בהחלט לצרכינו, אולם לאלה שמעוניינים מוצעת להורדה גם הגרסא המלאה.</p>
+<h1 id="_2">הורדה</h1>
+<ul>
+<li><a href="../db/2016.bak">הורדת גיבוי מסד נתונים לדוגמא - קובץ קטן יותר (כ-5GB)</a> - מומלץ להשתמש בקובץ הזה</li>
+<li><a href="https://mega.nz/#!Mx8HhbLD!xaSY_43LmRIAo48NcNaqQ5ddDnZWBq2ljMLPoNyEu-0">הורדת גיבוי מסד נתונים לדוגמא - קובץ גדול (כ-15GB)</a> - אם בא לכם לעבוד עם נתונים מלאים יותר, אתם יכולים להשתמש בגיבוי הזה. קחו בחשבון שהוא שוקל יותר ומכיל יותר נתונים, מה שיכול להשפיע על מהירות ריצת השאילתות שלכם.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+       
+        <a href="../c10/" class="btn btn-neutral float-right" title="פרק 10 - תנאים ולולאות ב- SQL, עבודה עם CURSOR-ים ושימוש ב- Dynamic SQL"><span class="icon icon-circle-arrow-right"></span> הקודם</a>
+      
+      
+        <a href="../resources/" class="btn btn-neutral" title="לקריאה נוספת">הבא <span class="icon icon-circle-arrow-left"></span></a>
+      
+     
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>כל הזכויות על התכנים באתר שמורות ל<a href="http://blogs.microsoft.co.il/shahar">שחר גבירץ</a>.</p>
+    
+  </div>
+
+  נבנה עם <a href="http://www.mkdocs.org">MkDocs</a> תוך שימוש ב <a href="https://github.com/snide/sphinx_rtd_theme">תבנית</a> שנוצרה ע"י" <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../c10/" style="color: #fcfcfc;">&laquo; הקודם</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../resources/" style="color: #fcfcfc">הבא &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67523682-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>
